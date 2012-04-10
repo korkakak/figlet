@@ -19,23 +19,23 @@
 SHELL = /bin/sh
 
 # The C compiler and linker to use
-CC	= gcc
-CFLAGS	= -g -O2 -Wall
-LD	= gcc
-LDFLAGS =
+CC	?= gcc
+CFLAGS	?= -g -O2 -Wall
+LD	?= gcc
+LDFLAGS ?=
 
 # Feature flags:
 #   define TLF_FONTS to use TOIlet TLF fonts
-XCFLAGS	= -DTLF_FONTS
+XCFLAGS	?= -DTLF_FONTS
 
 # Where to install files
-prefix	= /usr/local
+prefix	?= /usr/local
 
 # Where the executables should be put
-BINDIR	= $(prefix)/bin
+BINDIR	?= $(prefix)/bin
 
 # Where the man page should be put
-MANDIR	= $(prefix)/man
+MANDIR	?= $(prefix)/man
 
 # Where figlet will search first for fonts (the ".flf" files).
 DEFAULTFONTDIR = $(prefix)/share/figlet
